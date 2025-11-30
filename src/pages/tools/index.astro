@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('tools')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h3>Toolbase</h3>
+				<hr>
+				<table class="tools">
+					<tr>
+						<th>Title</th>
+						<th>Target (Plattform)</th>
+						<th>Post Release</th>
+						<th>Details</th>
+					</tr>
+					{
+						posts.map((post) => (
+							<tr>
+								<td>
+									<b>{post.data.title}</b>
+								</td>
+								<td>{post.data.target}</td>
+								<td>
+									<FormattedDate date={post.data.pubDate} />
+								</td>
+								<td>
+									<a href={`tools/${post.id}/`}>
+										Installation Instruction/Cheatsheet
+									</a>
+								</td>
+							</tr>
+						))
+					}
+				</table>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

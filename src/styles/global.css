@@ -1,8 +1,101 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz@10..72&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CUSTOM CSS */
+
+html {
+	background-color: #eee9de;
+}
+
+body {
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+}
+
+header {
+	color: #f3f3f3;
+	background-color: #24292e;
+	margin: 0;
+	padding: 0 1em;
+}
+
+a:hover {
+	color: #3f4851;
+}
+
+code {
+	font-size: 1rem !important;
+}
+
+pre:first-of-type {
+	background-color: #f5f5f5 !important;
+	color: #111 !important;
+}
+
+hr {
+	border-top: 1px solid rgb(213, 208, 198) !important;
+}
+
+nav.navigation {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 90rem;
+}
+
+nav.navigation h1 {
+	font-family: "Big Shoulders Stencil", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4rem;
+	color: #fff;
+	margin-bottom: 0;
+}
+
+nav.navigation h1 a {
+	padding: 0 !important;
+}
+
+main {
+	padding: 3em 1em;
+	background-color: #eee9de;
+	border-bottom: 1px solid #d5d0c6;
+}
+
+main section {
+	margin: auto;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 90rem;
+}
+
+table.tools {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.tools tr {
+	border-bottom: 1px solid #eee;;
+}
+
+table.tools tr:last-of-type {
+	border-bottom: none;
+}
+
+table.tools tr td:last-of-type,
+table.tools tr th:last-of-type {
+	text-align: right;
+}
+
+footer {
+	padding: 2em 1em 6em 1em;
+	background-color: #eee9de;
+	text-align: center;
+}
+
+/* DEFAULT CSS */
 
 :root {
 	--accent: #2337ff;
@@ -31,7 +124,7 @@
 	font-display: swap;
 }
 body {
-	font-family: "Atkinson", sans-serif;
+
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -43,12 +136,7 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
-main {
-	width: 1024px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
+
 h1,
 h2,
 h3,
@@ -81,9 +169,7 @@ b {
 a {
 	color: var(--accent);
 }
-a:hover {
-	color: var(--accent);
-}
+
 p {
 	margin-bottom: 1em;
 }
@@ -153,3 +239,4 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
