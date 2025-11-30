@@ -6,7 +6,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://si9int.github.io',
-	base: '/intelligenzija',
+	site: 'https://intelligenzija.onrender.com',
 	integrations: [mdx(), sitemap()],
 });
