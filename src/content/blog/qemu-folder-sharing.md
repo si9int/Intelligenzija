@@ -1,5 +1,5 @@
 ---
-title: 'Enbale Folder Sharing in QEMU/KVM'
+title: 'Enable Folder Sharing in QEMU/KVM'
 description: ''
 pubDate: 'Nov 30 2025'
 ---
