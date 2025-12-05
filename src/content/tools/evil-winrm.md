@@ -2,6 +2,7 @@
 title: 'EvilWinRM'
 description: ''
 pubDate: 'Nov 28 2025'
+version: '3.7'
 target: 'win'
 ---
 

@@ -23,7 +23,11 @@ a:hover {
 }
 
 code {
-	font-size: 1rem !important;
+	font-size: .85rem !important;
+}
+
+pre {
+	padding: 1rem 2rem !important;
 }
 
 pre:first-of-type {
@@ -42,6 +46,7 @@ nav.navigation {
 	margin: 0 auto;
 	max-width: 100%;
 	width: 90rem;
+	font-size: 1.15rem;
 }
 
 nav.navigation h1 {
@@ -58,6 +63,14 @@ nav.navigation h1 a {
 	padding: 0 !important;
 }
 
+nav.navigation a {
+	transition: opacity .25s ease-in-out;
+}
+
+nav.navigation a:hover {
+	opacity: .6;
+}
+
 main {
 	padding: 3em 1em;
 	background-color: #eee9de;
@@ -69,6 +82,18 @@ main section {
 	margin: 0 auto;
 	max-width: 100%;
 	width: 90rem;
+}
+
+main p {
+	font-size: 1rem;
+}
+
+main h1 {
+	font-size: 2rem;
+}
+
+main h2 {
+	font-size: 1.5rem;
 }
 
 table.tools {
@@ -129,7 +154,6 @@ footer {
 	font-display: swap;
 }
 body {
-
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -138,7 +162,6 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
 	line-height: 1.7;
 }
 
@@ -178,9 +201,7 @@ a {
 p {
 	margin-bottom: 1em;
 }
-.prose p {
-	margin-bottom: 2em;
-}
+
 textarea {
 	width: 100%;
 	font-size: 16px;
