@@ -1,0 +1,26 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title='AI in Cybersecurity' description={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+                <article>
+                    <div class="prose">
+                        <slot />
+                    </div>
+                </article>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
