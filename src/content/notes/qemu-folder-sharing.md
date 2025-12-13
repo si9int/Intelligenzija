@@ -4,27 +4,33 @@ description: ''
 pubDate: 'Nov 30 2025'
 ---
 
-##### Requirements
+## Requirements
 
 ```
-sudo apt update
-sudo apt install virtiofsd (host)
+$h> sudo apt update
+$h> sudo apt install virtiofsd
 ```
+Next open "virt-manager" and enable shared memory within the VM by navigating to `Memory > [X] Enable Shared Memory` . After rebooting the VM a shared filesystem can be added. This can be done by adding new hardware ("Add Hardware") and choosing "Filesystem" with the following details: 
 
-Then open e.g. "virt-manager" and configure the VM by navigating to "Memory", checking "Enable Shared Memory" and apply.
-Next add a shared filesystem using "Add Hardware" choosing "Filesystem" (Driver: "virtiofs", Source path: folder on machine, Target path: !identifier! [e.g. shared_from_host]). Start VM!
+- Driver: virtiofs
+- Source path: [folder on host]
+- Target path: [unique identifier e.g. shared_from_host]
 
-##### Mounting
+After submission, restart the VM and mount the new share.
+
+## Mount Permanently
 
 ```
-mkdir ~/shared
-sudo nano /etc/fstab
+$g> mkdir ~/shared
+$g> sudo nano /etc/fstab
+...
 [identifier] /home/[username]/shared virtiofs defaults 0 0
-sudo mount -a
+...
+$g> sudo mount -a
 ```
 
-##### Mount Temorarily
+## Mount Temorarily
 
 ```
-sudo mount -t virtiofs [identifier] ~/shared
+$g> sudo mount -t virtiofs [identifier] ~/shared
 ```

@@ -22,11 +22,12 @@ const posts = (await getCollection('blog')).sort(
 		<main>
 			<section>
 				<h1>Random Notes</h1>
+				<p>A collection of random (yes truly random) notes associated with various subjects (mostly Linux administration and IT security). Feel free to ignore it!</p>
 				<hr>
 				<table class="tools">
 					<tr>
 						<th>Title</th>
-						<th>Date</th>
+						<th>Date Published</th>
 					</tr>
 					{
 						posts.map((post) => (

@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz@10..72&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Big Shoulders Stencil';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/big-shoulders-stencil-v4-latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/noto-sans-v42-latin-regular.woff2') format('woff2'); 
+}
 
 /* CUSTOM CSS */
 

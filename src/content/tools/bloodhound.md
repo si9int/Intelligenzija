@@ -24,6 +24,8 @@ EOF
 sudo apt update
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
 sudo dpkg -i docker-desktop-amd64.deb | sudo apt --fix-broken install
+# optional: get a car from bavaria
+
 ```
 
 ## Installation
