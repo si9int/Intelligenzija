@@ -31,7 +31,7 @@ header {
 	background-color: #24292e;
 	background: linear-gradient(180deg,rgba(36, 41, 46, 1) 0%, rgba(11, 14, 15, 1) 100%);
 	margin: 0;
-	padding: 1rem 0;
+	padding: 1rem 2rem;
 }
 
 a:hover {
@@ -88,7 +88,7 @@ nav.navigation a:hover {
 }
 
 main {
-	padding: 3em 1em;
+	padding: 3em 2rem;
 	background-color: #eee9de;
 	border-bottom: 1px solid #d5d0c6;
 }
