@@ -10,5 +10,9 @@ A simple trick to anchor the dork is Google's 'Programmable Search Engine' (PSE)
 
 ![PSE example](https://i.imgur.com/fV8oJIw.png)
 
+#### How to solve this?
+
+Although crawlers can't be entirely restricted from visting a URL, it is possible to prevent Google from indexing sensitive sites or subsites. This can be done by e.g. implementing a `robots.txt` file or responding with an `X-Robots-Tag: noindex` HTTP header.
+
 ---
 [\*] With total length of 22-24 characters, a fixed `fi` prefix, and an encoding schema suggesting Base58/62, the search space consists of approximately 62^20 to 62^22 possible combinations (62 due to the alphanumeric base [a-z, A-Z, 0-9]). Example: `fiXYv4sBtHr2fvr7FtE2vF`.
